@@ -61,19 +61,19 @@
 	}
 
 	.advantages .chapter:nth-child(1)::before {
-		background-image: url(../images/antenna.svg);
+		background-image: url(../images/antenna1.svg);
 	}
 
 	.advantages .chapter:nth-child(2)::before {
-		background-image: url(../images/clock.svg);
+		background-image: url(../images/clock1.svg);
 	}
 
 	.advantages .chapter:nth-child(3)::before {
-		background-image: url(../images/diagram.svg);
+		background-image: url(../images/diagram1.svg);
 	}
 
 	.advantages .chapter:nth-child(4)::before {
-		background-image: url(../images/astronaut.svg);
+		background-image: url(../images/astronaut1.svg);
 	}
 
 	/* Works */

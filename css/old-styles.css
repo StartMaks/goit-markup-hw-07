@@ -32,7 +32,6 @@
 	background: rgba(46, 47, 66, 0.4);
 
 	opacity: 1;
-	/* overflow: unset; */
 }
 
 .backdrop.is-hidden {
@@ -63,22 +62,31 @@
 	border-radius: 4px;
 }
 
+.modal-police-box {
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.04em;
+	color: #4d5ae5;
+}
+
 .modal-close {
 	position: absolute;
-	transition: background-color var(--animation-duration) var(--animation-function);
-
-	display: flex;
-	top: 24px;
+	top: 30px;
 	right: 24px;
+	padding: 0;
+	display: flex;
 	align-items: center;
 	justify-content: center;
-
-	cursor: pointer;
 	width: 24px;
 	height: 24px;
-	border-radius: 50%;
+
+	background: #e7e9fc;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	background-color: var(--header-background-color);
+	border-radius: 50%;
+	transition: background-color var(--background-focus);
+	transition-duration: 250ms;
+	transition-timing-function: var(--cubic);
+	cursor: pointer;
 }
 
 .btn-modal {
@@ -173,9 +181,12 @@ textarea:focus {
 	font-size: 12px;
 	line-height: 1.33;
 	letter-spacing: 0.04em;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 	margin-bottom: 24px;
-	color: var(--modal-policy-color);
+	color: #8e8f99;
+	cursor: pointer;
 }
 
 .checkbox:checked + .logo-check {
@@ -221,6 +232,8 @@ textarea {
 		fill var(--animation-duration) var(--animation-function);
 	display: inline-block;
 	text-align: center;
+	/* align-items: center;
+  justify-content: center; */
 
 	width: 16px;
 	height: 16px;
@@ -230,7 +243,7 @@ textarea {
 }
 
 .check {
-	fill: var(--hero-text-color);
+	fill: transparent;
 }
 
 .btn-send {
@@ -434,7 +447,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-		url(../images/people-office.jpg);
+		url(../images/people-office1.jpg);
 	background-color: var(--secondary-background-color);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -494,8 +507,16 @@ ul {
 	padding: 0;
 }
 
+.section.work {
+	padding-bottom: 120px;
+}
+
 .item-description {
 	margin: 0;
+}
+
+.tint {
+	background-color: var(--header-background-color);
 }
 
 .section-title,
@@ -536,9 +557,6 @@ ul {
 .advantages .chapter:not(:last-child) {
 	margin-right: 24px;
 }
-/* .advantages .chapter + .chapter {
-  margin-left: 24px;
-} */
 
 .advantages .chapter {
 	width: calc((100%-24px * 3) / 4);
@@ -556,26 +574,22 @@ ul {
 }
 
 .advantages .chapter:nth-child(1)::before {
-	background-image: url(../images/antenna.svg);
+	background-image: url(../images/antenna1.svg);
 }
 
 .advantages .chapter:nth-child(2)::before {
-	background-image: url(../images/clock.svg);
+	background-image: url(../images/clock1.svg);
 }
 
 .advantages .chapter:nth-child(3)::before {
-	background-image: url(../images/diagram.svg);
+	background-image: url(../images/diagram1.svg);
 }
 
 .advantages .chapter:nth-child(4)::before {
-	background-image: url(../images/astronaut.svg);
+	background-image: url(../images/astronaut1.svg);
 }
 
 /* Work */
-
-.section.work {
-	padding-bottom: 120px;
-}
 
 .work-nav.list {
 	display: flex;
@@ -584,22 +598,14 @@ ul {
 .work-nav .chapter:not(:last-child) {
 	margin-right: 24px;
 }
-/* .work-nav .chapter + .chapter {
-  margin-left: 24px;
-} */
 
 /* Team */
 
 .section.tint {
-	max-width: 1440px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 120px;
 	padding-bottom: 120px;
-}
-
-.tint {
-	background-color: var(--header-background-color);
 }
 
 .team-nav .chapter {
@@ -720,7 +726,6 @@ footer {
 }
 
 .section.foot {
-	max-width: 1440px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 100px;
@@ -865,7 +870,8 @@ footer {
 	border-radius: 4px;
 	padding: 12px 24px;
 	min-width: 69px;
-	border: transparent;
+	border: 1px solid #e7e9fc;
+	border: none;
 
 	background-color: var(--footer-logo-part);
 	color: var(--logo-part-color);
